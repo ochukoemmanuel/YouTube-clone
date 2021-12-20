@@ -5,7 +5,7 @@ import VideoRow from './VideoRow';
 
 const SearchPage = () => {
   return (
-    <div className='searchPage'>
+    <div className='flex flex-col items-center ml-28 mt-32 mx-auto'>
       <div className='searchPage__filter'>
         <svg
           className='w-6 h-6 fa-rotate-45'

@@ -1,15 +1,20 @@
 import './App.css';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Header from './comp/Header';
+import Sidebar from './comp/Sidebar';
 import RecommendedVideos from './components/RecommendedVideos';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SearchPage from './components/SearchPage';
+import Category from './comp/Category';
+import Content from './comp/Content';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Header />
+        <div className='fixed inset-x-0 inset-y-0'>
+          <Header />
+          <Category />
+        </div>
         <Routes>
           <Route
             path='/search/:term'
@@ -23,9 +28,8 @@ function App() {
           <Route
             path='/'
             element={
-              <div className='app__page'>
-                <Sidebar />
-                <RecommendedVideos />
+              <div className='mt-28'>
+                <Content />
               </div>
             }
           />
